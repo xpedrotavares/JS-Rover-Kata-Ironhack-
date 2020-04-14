@@ -2,7 +2,8 @@
 let rover = {
     direction: 'N',
     x: 0,
-    y: 0    
+    y: 0,
+    travelLog: [{x: 0, y: 0} ]    
 };
 // ======================
 function turnLeft(rover) {
@@ -58,12 +59,16 @@ function turnLeft(rover) {
           rover.y++;
       }
       console.log(`Coordenadas do rover: x:${rover.x}, y:${rover.y}`);
+
+      let newPosition = {x: rover.x, y: rover.y};
+      rover.travelLog.push(newPosition);
   }
 
 
 //turnLeft(rover);
 //moveForward();
 
+// Comandos
 function command(rover, orders){
     for (let i = 0; i < orders.length; i++){
         let order = orders[i];
@@ -83,3 +88,4 @@ function command(rover, orders){
 }
 
 command(rover, 'RLF');
+
