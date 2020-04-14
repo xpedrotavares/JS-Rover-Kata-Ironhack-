@@ -61,11 +61,11 @@ function turnLeft(rover) {
   }
 
 
-turnLeft(rover);
-moveForward();
-/*
+//turnLeft(rover);
+//moveForward();
+
 function command(rover, orders){
-    for (let i = 0; i < orders.lenght; i++){
+    for (let i = 0; i < orders.length; i++){
         let order = orders[i];
         switch (order){
             case 'F':
@@ -82,5 +82,4 @@ function command(rover, orders){
     }
 }
 
-console.log(command(rover, 'R'));
-*/
+command(rover, 'RLF');
